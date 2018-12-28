@@ -3,10 +3,11 @@ package com.example.ggpetclinic.model;
 /**
  * Created by gayathrig on 26/12/2018.
  */
-public class Person {
+public class Person extends BaseEntity {
 
     private String firstName;
     private String lastName;
+
 
     public String getFirstName() {
         return firstName;
