@@ -45,4 +45,15 @@ public class OwnerServiceMapImplTest {
         assertNotNull(ownerServiceMap.findById(new Long(2)));
     }
 
+    @Test
+    public void delete(){
+        Owner owner=new Owner();
+        owner.setFirstName("Gayathri");
+        owner.setLastName("Gavarraju");
+        saveOwner(new Long(1), owner);
+        ownerServiceMap.delete(owner);
+        assertNull(ownerServiceMap.findById(new Long(1)));
+    }
+
+
 }

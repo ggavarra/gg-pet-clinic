@@ -6,7 +6,6 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
-import java.util.stream.Stream;
 
 /**
  * Created by gayathrig on 29/12/2018.
@@ -28,17 +27,22 @@ public abstract class AbstractMapService<T,ID> implements CrudService<T,ID> {
 
     @Override
     public T save(ID id, T object) {
+        System.out.println("Saving Object" + object);
         map.put(id,object);
         return object;
     }
 
     @Override
     public void deleteById(ID id) {
+        System.out.println("Deleting Object by ID" + id);
         map.remove(id);
     }
 
     @Override
     public void delete(T object) {
-        map.entrySet().stream().filter(idtEntry -> idtEntry.getValue().equals(object));
+        System.out.println("Deleting Object" + object);
+        map.entrySet().removeIf(entry ->
+            entry.getValue().equals(object)
+        );
     }
 }
