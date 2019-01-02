@@ -1,6 +1,6 @@
 package com.example.ggpetclinic.services.map;
 
-import com.example.ggpetclinic.model.Owner;
+import com.example.ggpetclinic.model.Vet;
 import com.example.ggpetclinic.services.CrudService;
 
 import java.util.Set;
@@ -8,20 +8,20 @@ import java.util.Set;
 /**
  * Created by gayathrig on 29/12/2018.
  */
-public class OwnerServiceMapImpl extends AbstractMapService<Owner, Long> implements CrudService<Owner,Long> {
+public class VetServiceMapImpl extends AbstractMapService<Vet, Long> implements CrudService<Vet, Long> {
 
     @Override
-    public Set<Owner> findAll() {
+    public Set<Vet> findAll() {
         return super.findAll();
     }
 
     @Override
-    public Owner findById(Object Id) {
+    public Vet findById(Object Id) {
         return super.findById(Id);
     }
 
     @Override
-    public Owner save(Long aLong, Owner object) {
+    public Vet save(Long aLong, Vet object) {
         return super.save(aLong, object);
     }
 
@@ -31,8 +31,8 @@ public class OwnerServiceMapImpl extends AbstractMapService<Owner, Long> impleme
     }
 
     @Override
-    public void delete(Owner object) {
+    public void delete(Vet object) {
         super.delete(object);
     }
-}
 
+}
